@@ -102,6 +102,10 @@ Version texte :
                            ESP32-S3                 XY-K485               Pompe EHEIM 3e
 ```
 
+Détail de la fiche jack :
+
+![Correspondance fiche jack et module XY-K485](docs/jack-xy-k485.svg)
+
 > **Ne pas alimenter l'ESP32 par le jack de la pompe** : ses trois contacts servent aux données (A, B) et à la masse.
 
 ---
@@ -122,6 +126,8 @@ Sur le XY-K485, TXD et RXD sont nommés du point de vue du microcontrôleur : on
 ### Module XY-K485 ↔ jack de la pompe
 
 La pompe a une prise **jack 3,5 mm femelle** sur la tête. Il faut une fiche **jack 3,5 mm mâle stéréo**, c'est-à-dire à **3 contacts** (TRS : *Tip, Ring, Sleeve*). Une fiche mono (2 contacts) ou une fiche casque-micro à 4 contacts (TRRS) ne convient pas.
+
+![Correspondance fiche jack et module XY-K485](docs/jack-xy-k485.svg)
 
 #### Les trois contacts de la fiche
 

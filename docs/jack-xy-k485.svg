@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Correspondance fiche jack 3,5 mm stéréo et module XY-K485</title>
+  <rect x="0" y="0" width="900" height="470" rx="14" fill="#ffffff"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="600" fill="#222">Fiche jack 3,5 mm stéréo (TRS) → module XY-K485</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#666">Côté gauche : la pointe s'enfonce dans la prise de la tête de pompe EHEIM</text>
+
+  <!-- fleche vers la pompe -->
+  <text x="18" y="222" font-size="13" fill="#666">vers la pompe</text>
+  <path d="M 98 175 L 40 175" stroke="#666" stroke-width="2" fill="none"/>
+  <path d="M 40 175 L 49 168 M 40 175 L 49 182" stroke="#666" stroke-width="2" fill="none"/>
+
+  <!-- fiche jack -->
+  <!-- pointe -->
+  <path d="M 105 175 Q 105 150 130 150 L 175 150 L 175 200 L 130 200 Q 105 200 105 175 Z" fill="#378ADD" stroke="#185FA5" stroke-width="2"/>
+  <text x="142" y="181" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">T</text>
+  <!-- isolant 1 -->
+  <rect x="175" y="153" width="14" height="44" fill="#2C2C2A"/>
+  <!-- bague -->
+  <rect x="189" y="150" width="80" height="50" fill="#1D9E75" stroke="#0F6E56" stroke-width="2"/>
+  <text x="229" y="181" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">R</text>
+  <!-- isolant 2 -->
+  <rect x="269" y="153" width="14" height="44" fill="#2C2C2A"/>
+  <!-- manchon -->
+  <rect x="283" y="150" width="170" height="50" fill="#888780" stroke="#5F5E5A" stroke-width="2"/>
+  <text x="368" y="181" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">S</text>
+  <!-- corps -->
+  <rect x="453" y="140" width="110" height="70" rx="8" fill="#444441"/>
+  <text x="508" y="181" text-anchor="middle" font-size="14" fill="#ffffff">corps</text>
+
+  <!-- etiquettes au-dessus -->
+  <text x="140" y="118" text-anchor="middle" font-size="15" font-weight="600" fill="#185FA5">Pointe</text>
+  <text x="140" y="136" text-anchor="middle" font-size="12" fill="#666">Tip · « L »</text>
+  <text x="229" y="118" text-anchor="middle" font-size="15" font-weight="600" fill="#0F6E56">Bague</text>
+  <text x="229" y="136" text-anchor="middle" font-size="12" fill="#666">Ring · « R »</text>
+  <text x="368" y="118" text-anchor="middle" font-size="15" font-weight="600" fill="#5F5E5A">Manchon</text>
+  <text x="368" y="136" text-anchor="middle" font-size="12" fill="#666">Sleeve · « GND »</text>
+
+  <!-- isolants legende -->
+  <text x="390" y="230" font-size="12" fill="#666">bandes noires = anneaux isolants</text>
+
+  <!-- module XY-K485 -->
+  <rect x="640" y="250" width="230" height="190" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="2"/>
+  <text x="755" y="278" text-anchor="middle" font-size="17" font-weight="600" fill="#085041">Module XY-K485</text>
+  <text x="755" y="297" text-anchor="middle" font-size="12" fill="#0F6E56">bornier bleu côté RS485</text>
+  <circle cx="665" cy="330" r="9" fill="#ffffff" stroke="#0F6E56" stroke-width="2"/>
+  <text x="684" y="335" font-size="16" font-weight="600" fill="#085041">Terre</text>
+  <circle cx="665" cy="370" r="9" fill="#ffffff" stroke="#0F6E56" stroke-width="2"/>
+  <text x="684" y="375" font-size="16" font-weight="600" fill="#085041">A+</text>
+  <circle cx="665" cy="410" r="9" fill="#ffffff" stroke="#0F6E56" stroke-width="2"/>
+  <text x="684" y="415" font-size="16" font-weight="600" fill="#085041">B-</text>
+
+  <!-- fils -->
+  <path d="M 140 200 L 140 410 L 656 410" stroke="#378ADD" stroke-width="4" fill="none" stroke-linejoin="round"/>
+  <path d="M 229 200 L 229 250 L 229 370 L 656 370" stroke="#1D9E75" stroke-width="4" fill="none" stroke-linejoin="round"/>
+  <path d="M 368 200 L 368 330 L 656 330" stroke="#888780" stroke-width="4" fill="none" stroke-linejoin="round"/>
+
+  <!-- libelles sur les fils -->
+  <rect x="420" y="317" width="150" height="26" rx="6" fill="#ffffff"/>
+  <text x="495" y="335" text-anchor="middle" font-size="14" fill="#5F5E5A">Masse (GND)</text>
+  <rect x="420" y="357" width="150" height="26" rx="6" fill="#ffffff"/>
+  <text x="495" y="375" text-anchor="middle" font-size="14" fill="#0F6E56">RS485 A</text>
+  <rect x="420" y="397" width="150" height="26" rx="6" fill="#ffffff"/>
+  <text x="495" y="415" text-anchor="middle" font-size="14" fill="#185FA5">RS485 B</text>
+
+  <text x="40" y="455" font-size="12" fill="#666">Inverser A et B ne casse rien : si « Pompe connectée » reste à OFF, permuter pointe et bague.</text>
+</svg>
