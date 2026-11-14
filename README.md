@@ -121,13 +121,56 @@ Sur le XY-K485, TXD et RXD sont nommés du point de vue du microcontrôleur : on
 
 ### Module XY-K485 ↔ jack de la pompe
 
-| Borne XY-K485 | Contact du jack | Signal |
-|---|---|---|
-| **A+** | bague | RS485 A |
-| **B-** | pointe | RS485 B |
-| **Terre** | manchon | GND |
+La pompe a une prise **jack 3,5 mm femelle** sur la tête. Il faut une fiche **jack 3,5 mm mâle stéréo**, c'est-à-dire à **3 contacts** (TRS : *Tip, Ring, Sleeve*). Une fiche mono (2 contacts) ou une fiche casque-micro à 4 contacts (TRRS) ne convient pas.
 
-Brochage repris du projet Hackaday « Eheim Pro 3e Control ». Inverser A et B ne casse rien.
+#### Les trois contacts de la fiche
+
+```
+        pointe     bague          manchon
+       (Tip, T)   (Ring, R)      (Sleeve, S)
+        ______    ________    __________________ _____________
+       /      |  |        |  |                  |             |
+      |   T   |▌▌|   R    |▌▌|        S         |   corps     |====  câble
+       \______|  |________|  |__________________|_____________|
+                ▲            ▲
+          anneaux isolants noirs
+```
+
+| Contact | Où sur la fiche | Signal | Borne du XY-K485 |
+|---|---|---|---|
+| **Pointe** (T) | le bout arrondi, avant le premier anneau isolant | RS485 **B** | **B-** |
+| **Bague** (R) | la partie métallique entre les deux anneaux isolants | RS485 **A** | **A+** |
+| **Manchon** (S) | la longue partie métallique côté corps de la fiche | **masse (GND)** | **Terre** |
+
+Brochage repris du projet Hackaday « Eheim Pro 3e Control » (dans le câble de l'auteur : noir = B, marron = A, blindage = masse).
+
+#### Avec un adaptateur jack mâle → bornier à vis (recommandé)
+
+Ces adaptateurs sont prévus pour l'audio, leurs bornes portent des noms audio :
+
+| Marquage sur l'adaptateur | Contact | Vers le XY-K485 |
+|---|---|---|
+| **L** (gauche) ou **T** | pointe | **B-** |
+| **R** (droite) | bague | **A+** |
+| **G**, **GND**, **−** ou **S** | manchon | **Terre** |
+
+Le marquage varie d'un fabricant à l'autre : en cas de doute, la piste de cuivre qui part de chaque borne mène au contact correspondant.
+
+#### Avec un câble audio jack coupé
+
+Les couleurs ne sont **pas normalisées**. Le plus souvent : blanc ou jaune = gauche = **pointe**, rouge = droite = **bague**, fil nu ou blindage = **manchon**. À vérifier si possible (continuité au multimètre, ou ouverture de la fiche).
+
+#### Résumé
+
+```
+  Fiche jack (côté pompe)          Module XY-K485
+  ───────────────────────          ──────────────
+  Pointe   (T, « L »)  ──────────►  B-
+  Bague    (R, « R »)  ──────────►  A+
+  Manchon  (S, « GND »)──────────►  Terre
+```
+
+Inverser A et B ne casse rien : si « Pompe connectée » reste à OFF, permuter les fils de la pointe et de la bague.
 
 ### Broches à éviter sur la N16R8
 
