@@ -53,6 +53,10 @@ Testé sur un **2076 (professionel 3e 450), firmware 3.80**. Devrait fonctionner
 
 ## Schéma de branchement
 
+![Câblage ESP32-S3 et module XY-K485](docs/esp32-xy-k485.svg)
+
+Vue d'ensemble :
+
 ```mermaid
 flowchart LR
     USB["Chargeur USB-C<br/>5 V, 1 A"] -->|USB-C| ESP
@@ -113,6 +117,8 @@ Détail de la fiche jack :
 ## Correspondance des broches
 
 ### ESP32-S3 ↔ module XY-K485
+
+![Câblage ESP32-S3 et module XY-K485](docs/esp32-xy-k485.svg)
 
 | Broche ESP32-S3 | Broche XY-K485 | Rôle |
 |---|---|---|
